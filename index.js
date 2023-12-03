@@ -10,7 +10,9 @@ app.use(cors());
 
 app.use("/users",UserRouter)
 app.use("/posts",PostRouter)
-
+app.get("/",(req,res)=>{
+res.send("Backend Is Running!")
+})
 app.listen(3000,async()=>{
     try {
         await connection;
