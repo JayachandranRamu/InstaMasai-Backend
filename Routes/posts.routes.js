@@ -2,7 +2,7 @@ const express=require("express");
 const { PostModel } = require("../Model/posts.model");
 const { auth } = require("../Middleware/auth.middleware");
 const PostRouter=express.Router();
-PostRouter.use(auth)
+
 //Post the Post
 PostRouter.post("/add",async(req,res)=>{
     try {
